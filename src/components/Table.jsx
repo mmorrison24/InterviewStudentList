@@ -85,10 +85,14 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     deleteStudent(id) {
+
       dispatch({
         type: "DELETE_STUDENT",
         payload: { id },
       });
+      debugger;
+      window.location.href = '/';
+      //this.props.history.push('/dashboard')
     },
   };
 };
